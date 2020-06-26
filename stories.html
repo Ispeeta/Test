@@ -28,7 +28,7 @@
 
     <!-- Responsive CSS -->
     <link href="css/responsive.css" rel="stylesheet">
-
+    <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
 
 
 </head>
@@ -416,7 +416,17 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
     document.getElementsByTagName("body")[0].appendChild(e);
     </script>
     <!-- End of Site Search 360 script -->
-
+    <script>
+        if (window.netlifyIdentity) {
+          window.netlifyIdentity.on("init", user => {
+            if (!user) {
+              window.netlifyIdentity.on("login", () => {
+                document.location.href = "/admin/";
+              });
+            }
+          });
+        }
+      </script>
     
 </body>
 
