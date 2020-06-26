@@ -6,9 +6,9 @@ publish_mode: editorial_workflow
 media_folder: "img/bg-img" # Media files will be stored in the repo under images/uploads
 
 collections:
-  - name: "/Connect-to-Change" # Used in routes, e.g., /admin/collections/blog
+  - name: "Articles" # Used in routes, e.g., /admin/collections/blog
     label: "Articles" # Used in the UI
-    folder: "/Connect-to-Change" # The path to the folder where the documents are stored
+    folder: "Connect-to-Change" # The path to the folder where the documents are stored
     create: true # Allow users to create new documents in this collection
     slug: "{{year}}-{{month}}-{{day}}-{{slug}}" # Filename template, e.g., YYYY-MM-DD-title.md
     fields: # The fields for each document, usually in front matter
